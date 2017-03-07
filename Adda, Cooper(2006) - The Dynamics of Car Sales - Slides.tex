@@ -1,0 +1,672 @@
+%% LaTeX Beamer presentation template (requires beamer package)
+%% see http://bitbucket.org/rivanvx/beamer/wiki/Home
+%% idea contributed by H. Turgut Uyar
+%% template based on a template by Till Tantau
+%% this template is still evolving - it might differ in future releases!
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+\usetheme{Warsaw}
+
+\setbeamercovered{transparent}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+% font definitions, try \usepackage{ae} instead of the following
+% three lines if you don't like this look
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+
+
+\usepackage[T1]{fontenc}
+
+\usepackage{multicol}
+
+\usepackage{bm}
+
+\usepackage{amsmath}
+
+\setbeamertemplate{frametitle continuation}{}
+
+\title{The Dynamics of Car Sales: \\ A Discrete Choice
+Approach}
+
+\subtitle{Adda and Cooper, 2006}
+
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+%\author{F.~Author\inst{1} \and S.~Another\inst{2}}
+\author{Guo Zhang}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+\institute[Universities of]
+{
+WISE, Xiamen University
+}
+
+\date{\today}
+
+
+% This is only inserted into the PDF information catalog. Can be left
+% out.
+\subject{Literatures}
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSection[]
+{
+\begin{frame}<beamer>[plain]
+\frametitle{Contents}
+\begin{multicols}{2}
+\tableofcontents[currentsection,currentsubsection]
+\end{multicols}
+\end{frame}
+}
+
+\AtBeginSubsection[]
+{
+\begin{frame}<beamer>[plain]
+\frametitle{Contents}
+\begin{multicols}{2}
+\tableofcontents[currentsection,currentsubsection]
+\end{multicols}
+\end{frame}
+}
+
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain] %[allowframebreaks] %[plain]
+\frametitle{Contents}
+\begin{multicols}{2}
+  \tableofcontents
+\end{multicols}
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Theme}
+% understand
+\begin{itemize}
+\item Behavior of household durable consumption expenditures over time
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation: Aggregate Perspective(dynamic)}
+% understand
+\begin{itemize}
+\item Mankiw puzzle(Mankiw 1982): permanent income hypothesis(PIH) is inconsistent with observed data
+    \begin{itemize}
+    \item Theory: ARMA(1,1) process
+    \item Empirical results: AR(1) process; depreciation rate is 100\%.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation: Household's Perspective(heterogeneous, discrete)}
+% understand
+\begin{itemize}
+\item A model of \textbf{heterogeneity} and \textbf{discrete adjustment} can qualitatively match relevant parts of the data.
+    \begin{itemize}
+    \item Lam(1991): households only \textbf{occasionally adjust} their stock of durables
+    \item Bar-Ilan and Blinder (1988,1992), Bertola and Caballero (1990) and Caballero (1990,1993): view aggregate observations on durable purchases as the outcome of the aggregation over \textbf{heterogeneous} microeconomic agents
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Overview}
+% understand
+\begin{itemize}
+\item Framework: Determinants of the \textbf{time series representation} of durable expenditures in an explicit \textbf{dynamic}, \textbf{discrete choice} framework
+    \begin{itemize}
+    \item ARMA(1,1) underlies the "Mankiw puzzle"
+    \item VAR of sales, price and income - impulse reponse function
+    \end{itemize}
+\item Goals:
+  \begin{itemize}
+  \item Confronting the Mankiw puzzle for car sales
+  \item Whether an aggregated discrete choice model can match and explain this rich time response to an income shock
+  \end{itemize}
+
+\framebreak
+% not understand
+\item Model:
+  \begin{itemize}
+  \item Basis: Adda and Cooper(2000a)
+  \item Difference: Drawn directly form the dynamic optimization problem without imposing any structure directly on agents' decision rules(specify (S,s) bands or "desired stock" directly) % not understand
+  \item Reasons:
+    \begin{itemize}
+    \item PIH assumptions underling "desired stock" approach are not supported by data
+    \item More consistent theoretically % not understand
+    \end{itemize}
+  \end{itemize}
+
+\framebreak
+% not understand
+\item Findings:
+  \begin{itemize}
+  \item
+  \end{itemize}
+\framebreak
+% not understand
+\item Sources of these dynamics:
+  \begin{itemize}
+  \item % not understand
+  \item Sources of these dynamics
+    \begin{itemize}
+    \item Fluctuations or shocks in the replacement probability - most important
+    \item Evolution of the cross sectional distribution of car vintages - surprisingly little
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\section{Evidence on Aggregate Car Purchases}
+\begin{frame}
+\frametitle{Outline}
+% summarized
+\begin{itemize}
+\item Show the raw data on sales and cross sectional distribution over sample period
+\item Test the ARMA(1,1) representation again
+\item Impulse response functions from VAR on car sales, income and prices
+ \begin{itemize}
+ \item Illustrate why ARMA(1,1) is inadequate
+ \item Evaluate the time series implication of estimated model
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Facts: Car Sales and the Cross Sectional Distribution}
+
+\begin{frame}
+\frametitle{Car Sales(Figure 1)}
+% understand
+\begin{itemize}
+\item Measured as registrations of new cars
+\item Considerable volatility
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+% summarized
+\frametitle{Cross Sectional Distribution(Figure 2)}
+Pattern:
+\begin{itemize}
+\item New -> Old(ripple) -> Scrapped or destroyed
+\item Echo effects: burst of sales -> bulge in the CDF; tempered by scrapping at earlier ages % not understand
+\end{itemize}
+Usage:
+\begin{itemize}
+\item Match moments from the CDF in the estimation of parameters % not understand
+\item Variations in the CDF plan a role in explaining time series variation in sales
+\end{itemize}
+\end{frame}
+
+\subsection{Time Series Representations}
+\subsubsection{ARMA(1,1) Representation}
+% understand
+\begin{frame}
+\frametitle{Extended Permanent income hypothesis model for durability}
+\begin{itemize}
+\item A durable good: expenditure - $e_t$; depreciation - $\delta$
+\item Uncertain income: innovation to income?? - $\varepsilon_t$
+\item Quadratic utility function
+\end{itemize}
+$$
+e_{t+1}=\delta \alpha_0 +\alpha_1 e_t + \varepsilon_{t+1} - (1-\delta)\varepsilon_t
+$$
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimation Results}
+\begin{itemize}
+\item Hypothesis that the rate of depreciation is close to 100\% per year would not be rejected for most of the
+specifications
+\item robust across
+\begin{itemize}
+\item Categories of durables
+\item Countries
+\item Time periods
+\item Detrending method % not understand
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Impulse Response Functions(IRF)}
+% summarized
+\begin{frame}
+\frametitle{Impulse Response Functions}
+\begin{itemize}
+\item VAR model:
+  \begin{itemize}
+  \item Reason: joint dynamics of durables, income and prices over time
+  \item Variables: automobile sales, automobile prices relative to the CPI,
+income
+  \item Order: income, prices, sales(innovations to income are exogenous, prices
+respond to both price and income innovations and sales respond to innovations in all three variables) % not understand
+  \item Imposed on actual data as well as the simulated data % not understand
+  \item No structural interpretation
+  \end{itemize}
+\item Empirical results(Figure 3, P31):
+  \begin{itemize}
+  \item Income on sales: dampened oscillation around the baseline
+    \begin{itemize}
+    \item Endogenous evolution of the stock of cars can potentially produce replacement cycles
+    \item Income and prices are serially correlated and have some cross dynamics
+    \end{itemize}
+  \item Price on sales: differs across two contries
+    \begin{itemize}
+    \item US: reduce
+    \item France: increase
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Can the ARMA model match the IRFs?}
+\begin{frame}
+\frametitle{Can the ARMA model match the IRFs?}
+% summarized
+\begin{itemize}
+\item ARMA(1,1) cannot reproduce the oscillations % not understand
+\item ARMA(1,1) model is structurally unable to deliver
+a "depreciation rate" low enough to be credible - Mankiw
+puzzle
+\end{itemize}
+\end{frame}
+
+\section{Dynamic Discrete Choice Model}
+\subsection{Household Behavior}
+\begin{frame}
+\frametitle{Starting Point}
+% understand
+\begin{itemize}
+\item An agent with a car of age i=0,1,....
+\item State(z,Z):
+\begin{itemize}
+\item z: vector of household specific taste \textbf{shocks}
+\item $Z\equiv(p,Y,\varepsilon)$: vector of aggregate state variables
+\item p: relative price of the durable good
+\item Y: aggregate income
+\item $\varepsilon$: \aggregate taste shock
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Household Decision}
+% summarized
+\begin{itemize}
+\item Decision: whether to retain a car of age i or scrap it
+\begin{itemize}
+\item Scrap: receive the scrap value of $\pi$; purchase a new car.
+\item Retain: receive the flow of services; cannot purchase another car by assumption
+\item Choices influenced by a choice specific i.i.d shock $z_j$,j=k,r
+\item Constant utility gain,$\alpha_k$, from keeping the car % not understand
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+% understand
+\frametitle{Initial Restrictions}
+\begin{itemize}
+\item No second-hand market
+\item No borrowing or lending
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Formal Model}
+% summarized
+\begin{itemize}
+\item $V_i(z,Z)$: value of having a car of age i to a household
+\item $V_i^k(z,Z)$ and $V_i^k(z,Z)$: values from keeping and scrapping an age i car in state (z,Z)
+\item $\delta$: probability of car destroyed
+\item $p'-\pi$: Cost of a new car
+\item scrap value independent of replacement value
+\end{itemize}
+\begin{align}
+V_i(z,Z) &= max[V_i^k(Z)+\alpha_k+z_k,V^r(Z)+z_r]
+\intertext{where}
+V_i^k &= u(s_i,Y,\varepsilon)+\beta(1-\delta)E_{(Z',z|Z,z)}V_{i+1}(z',Z')+\beta\delta E_{Z'|Z}V^r(Z')
+\intertext{and}
+V^r &= u(s_1,Y-p+\pi,\varepsilon)+\beta(1-\delta)E_{(Z',z|Z,z)}V_{2}(z',Z')+\beta\delta E_{Z'|Z}V^r(Z')
+\end{align}
+\framebreak
+Utility function separable between durables and nodurables:
+\begin{align}
+u(s_i,c)=[i^{-\gamma}+\varepsilon\frac{(c/\lambda)^{1-\xi}}{1-\xi}]
+\end{align}
+% i? taste shock?
+\begin{itemize}
+\item c: consumption of non-durable goods
+\item $\gamma$: curvature for the service flow of car ownership
+\item $\xi$: curvature for consumption
+\item $\lambda$: scale factor
+\item Taste shock $\varepsilon$ influences the contemporaneous marginal rate of substitution between car services and nondurables
+\end{itemize}
+\framebreak
+Specify the stochastic process for income, prices and the aggregate taste shocks:
+\begin{align*}
+Y_t &= \mu_y + \rho_{YY}Y_{t-1}+\rho_{Yp}p_{t-1}+u_{Yt} \\
+p_t &= \mu_p + \rho_{pY}_{t-1} + \rho_{pp}p_{t-1}+u_{pt} \\
+\varepsilon_t &= \mu_\varepsilon + \rho_{\varepsilon Y}Y_{t-1}+ \rho_{\varepsilon p}p_{t-1}+u_{\varepsilon t} \\
+\end{align*}
+Covariance matrix of the innovations $u=\{u_{Yt},u_{pt},u_{\varepsilon t}\}$:
+\begin{equation*}
+\Omega =
+\begin{bmatrix}
+\varpi_Y & \varpi_{Yp}& 0 \\
+\varpi_{pY}& \varpi_p & 0 \\
+0 & 0 & \varpi_\varepsilon \\
+\end{bmatrix}
+\end{equation*}
+\framebreak
+% to be continued
+\end{frame}
+
+
+
+\subsection{Aggregate Implications}
+\begin{frame}
+\frametitle{}
+\end{frame}
+
+\section{Estimation}
+\subsection{Method}
+\begin{frame}
+\frametitle{Estimation Steps}
+\begin{itemize}
+\item Step 1: Parameters for the joint process of aggregate income and prices(Appendix A)
+\item Step 2: Parameters from the policy functions
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimation Strategy}
+\begin{itemize}
+\item Strategy: To find the parameters that bring data from the simulated model as close as possible to the data
+\begin{itemize}
+\item $\gamma$: matching three moments characterizing the cross sectional distribution as well as three moments characterizing the probability of scrapping a car(hazard function)
+\item $\theta$: find the one to minimize the distance between the actual and simulated data 
+\end{itemize}
+\item Types of observations:
+\begin{itemize}
+\item Time series observations on sales, prices and income to match the sales predicted by our model
+\item 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimating $\theta$}
+\begin{itemize}
+\item Overall criterion:
+$$
+L(\theta)=\phi L^1(\theta)+L^2(\theta)
+$$
+\item First component: standard nonlinear least square criterion measuring the squared distance between observed and average predicted values of the variables
+$$
+L^1(\theta)
+$$
+\item Second piece: 
+$$
+L^2(\theta)
+$$
+\end{itemize}
+\end{frame}
+
+\subsection{Estimation Results}
+
+\begin{frame}
+\frametitle{Estimation Results(Table 2)}
+% summarized
+\begin{itemize}
+\item Rate of depreciation of service flow($\gamma$): 34\% for France, 41\% for US; significant
+\item Curvature estimates from nondurable consumption($\xi$): 1.7-1.8
+\item Actual and predicted moments 
+\item Probability of car breakdown($\delta$):1-2\%
+\item $R^2$: % not understand
+\item Over-identifying restrictions: % not understand
+\end{itemize}
+\end{frame}
+
+\subsection{Time Series Representations}
+\subsubsection{ARMA Representation}
+\begin{frame}
+\frametitle{ARMA Representation(Table 3}
+\begin{itemize}
+\item Methods:
+\begin{itemize}
+\item 
+\end{itemize}
+\item Results:
+\begin{itemize}
+\item
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Impulse Response Functions}
+\begin{frame}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+
+\section{Decomposing the Results: What lies behind the Oscillations?}
+\begin{frame}
+\frametitle{Sources of the dynamics}
+\begin{itemize}
+\item A shock to income produces a dynamic in durable expenditures as agents respond differentially(i.e, agents with younger cars are less likely to respond to income variations than are agents with
+older cars)
+\item Dynamics induced by prices and income as these processes are serially correlated. Movements in these variables are represented by shifts in the probability of adjustment(hazard)
+\end{itemize}
+\end{frame}
+
+\subsection{Sales}
+\begin{frame}
+\frametitle{Sales}
+\end{frame}
+
+\subsection{Decomposing the IRFs}
+\begin{frame}
+\frametitle{Decomposing the IRFs}
+\end{frame}
+
+\section{Robustness}
+\begin{frame}
+\frametitle{Robustness}
+Restriction relaxed:
+\begin{itemize}
+\item Market for the sale of used cars
+\item Borrow and lend
+\end{itemize}
+Methods:
+\begin{itemize}
+\item ARMA(1,1)
+\item Impulse response functions from a linear VAR model.
+\end{itemize}
+\end{frame}
+
+\subsection{Used Car Markets}
+\begin{frame}
+\frametitle{Used Car Markets}
+\end{frame}
+
+\subsection{Capital Markets}
+\begin{frame}
+\frametitle{Capital Markets}
+\begin{itemize}
+\item Cost of buying a durable good cannot be spread over time, thus implicity increasing the cost of such expenditures.
+\end{itemize}
+\end{frame}
+
+\subsection{Robustness of Implied Dynamics of Car Sales}
+\begin{frame}
+\frametitle{Robustness of Implied Dynamics of Car Sales}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+% understand
+\begin{frame}
+\frametitle{Conclusion}
+\begin{itemize}
+\item Theme: aggregate time series implications of a model of consumption of both durables and nondurables at the household level
+\item Model: Dynamic discrete choice, infrequent purchases of durables - impulse response functions
+\item Contribution: 
+\begin{itemize}
+\item Solving the "durables puzzle" of Mankiw(1982)
+\item Focus on the underlying parameters of the individual��s dynamic discrete choice problem; 
+\item Emphasized properties of the cross sectional distribution of car ages; 
+\item Time series implications that match certain features of the data
+\end{itemize}
+\item Decomposition: hazard function(most) and evolution of the cross sectional distribution(some)
+\item Robustness: second hand markets; borrowing and landing
+\item Further attention:
+\begin{itemize}
+\item Price endogenously
+\item Household-level data
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Appendix}
+\subsection{Estimation Results for Joint Process of Income and Prices}
+\begin{frame}
+\frametitle{Estimation Results for Joint Process}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\subsection{Extensions to Our Baseline Model}
+\subsubsection{Used Car Markets}
+\begin{frame}
+\frametitle{Used Car Markets}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\subsubsection{Capital Markets}
+\begin{frame}
+\frametitle{Capital Markets}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\section{My Notes}
+\subsection{Economic Notes}
+\begin{frame}
+\frametitle{Permanent Income Hypothesis(PIH)}
+\begin{itemize}
+\item Definition: a person's consumption at a point in time is determined not just by their current income but also by their expected income in future years��their "permanent income"
+\item Permanent income: expected long-term average income.
+\end{itemize}
+\end{frame}
+
+\subsection{Mathematical Notes}
+
+\begin{frame}
+\frametitle{Autoregressive(AR) Model\footnotemark}
+AR(p):
+$$
+y_t = c + \sum_{i=1}^{p}\varphi_i y_{t-i}+\sigma v_t + \varepsilon_t
+$$
+\begin{itemize}
+\item $\varphi_i$: parameters of the model
+\item c: constant
+\item $\varepsilon_t$: white noise
+\end{itemize}
+\footnotetext{https://en.wikipedia.org/wiki/Autoregressive_model}
+\end{frame}
+
+\begin{frame}
+\frametitle{Moving-Average(MA) Model\footnotemark}
+MA(q):
+$$
+X_t=\mu+\varepsilon_t+\theta_1\varepsilon_{t-1}+...+\theta_q\varepsilon_{t-q}
+$$
+\begin{itemize}
+\item $\mu$: mean of the series
+\item $\theta_i$: parameters of the model
+\item $\varepsilon_{t-i}$: white noise
+\end{itemize}
+\footnotetext{https://en.wikipedia.org/wiki/Moving-average_model}
+\end{frame}
+
+\begin{frame}
+\frametitle{Autoregressive-Moving-Average Model}
+ARMA(p,q): the model with p autoregressive terms and q moving-average terms
+$$
+X_t = c + \varepsilon_t + \sum_{t=1}^pX_{t-i}+\sum_{i=1}^{q}\theta_i\varepsilon_{t-i}
+$$
+\begin{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vector Autoregression(VAR)}
+VAR(p): evolution of a set of k endogenous variables over the same sample period
+$$
+y_t = c + \sum_{i=1}^p A_i y_{t-i}+e_t
+$$
+\begin{itemize}
+\item $y_t$: k*1 vector
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{VAR: structural vs. reduced form}
+\begin{itemize}
+\item Structural:
+$$
+B_0y_t=c_0+\sum_{i=1}^{p}B_i y_{t-i}+\varepsilon_t
+$$
+\item Reduced-form:
+$$
+y_t = c + \sum_{i=1}^p A_i y_{t-i}+e_t
+$$
+\end{itemize}
+\end{frame}
+
+\end{document}
+

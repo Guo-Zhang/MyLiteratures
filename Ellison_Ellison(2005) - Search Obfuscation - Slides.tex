@@ -1,0 +1,379 @@
+\documentclass{beamer}
+
+% theme
+\mode<presentation>
+{
+\usetheme{Warsaw}
+
+\setbeamercovered{transparent}
+}
+
+% packages
+\usepackage{multicol}
+\usepackage{amsmath}
+
+% settings
+\linespread{1.2}
+\setbeamertemplate{frametitle continuation}{}
+
+% title page
+\title{Search, Obfuscation, and Price Elasticities on the Internet}
+\subtitle{Glenn Ellison and Sara Fisher Ellison, 2009}
+\author{Guo Zhang}
+\institute[Universities of]
+{
+WISE, Xiamen University
+}
+\date{This Version: \today}
+\subject{Literatures}
+
+
+% body
+\begin{document}
+
+% title page
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+% content
+\begin{frame}[plain] %[allowframebreaks] 
+\frametitle{Contents}
+\small
+\begin{multicols}{2}
+  \tableofcontents
+\end{multicols}
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Introduction}
+% understand
+\begin{frame}
+\frametitle{Motivation}
+% understand
+\begin{itemize}
+\item Background:
+  \begin{itemize}
+  \item Search technology would have a dramatic effect by making it easy for consumers to compare prices at online and offline merchants.
+  \item Advances in search technology are accompanied by investment by firm in obfuscation.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Overview}
+\begin{itemize}
+\item Revelent Theory
+  \begin{itemize}
+  \item Obfuscation can raise search costs, leading to less consumer learning
+    and higher profits.
+  \item Sales of "add-ons" at high unadvertised
+prices can raise equilibrium profits in a competitive price discrimination model
+  \end{itemize}
+  
+\item Data: Pricewatch
+  \begin{itemize}
+  \item Not too complicated
+  \item Unusually rich data
+  \item Extreme aspects of the environment
+  \end{itemize}
+  
+\framebreak
+
+\item Informal evidence of obfuscation
+  \begin{itemize}
+  \item Extended-version loss-leader strategy: offer a low-quality product at a low price to attract consumers and then try to convince them
+to pay more for a superior product
+    \begin{itemize}
+    \item Upgrade rather than buy both
+    \item Loss leader may be sold for a slight profit rather than at a loss
+    \end{itemize}
+  \end{itemize}
+  
+\framebreak
+  
+\item Formal Empirical Analysis
+  \begin{itemize}
+  \item Demand and substitution patterns within four categories of computer memory modules
+  \item Matching Data from two sources
+    \begin{itemize}
+    \item Yearlong hourly price series: repeatedly conducting price searches on Pricewatch.
+    \item Sales data: a single private firm that operates several computer parts websites and derives most of its sales from Pricewatch referrals
+    \end{itemize}
+  \end{itemize}
+    
+\framebreak
+\item Results
+    \begin{enumerate}
+    \item Price search technologies
+can dramatically reduce search frictions. The firm
+faces a demand elasticity of \textbf{-20} or more for its lowest quality memory modules.
+    \item Charging a low price for a low-quality product
+      increases our retailer's sales of medium- and high-quality products.
+    
+\framebreak
+    
+    \item Evidence of the relevance of both mechanisms
+      \begin{itemize}
+      \item In the search-theoretic model, obfuscation raises profits by making consumers less informed (search costs)
+      \item In Ellison's (2005) add-on pricing model, obfuscation raises profits by creating an adverse-selection effect that deters price-cutting (price discrimination)
+      \end{itemize}
+      
+    \item Retailers' obfuscation strategies have been successful in raising markups beyond the level that would otherwise be sustainable, supported by additional cost data
+        \begin{itemize}
+        \item Price-cost margin($\frac{p-MC}{p}$): 3\%-6\%
+        \item Markup($\frac{p-MC}{MC}$): 12\%
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Literature Review}
+\begin{itemize}
+\item Empirical studies on price search engines
+  \begin{itemize}
+  \item Brynjolfsson and Smith (2001): using a data set containing the click sequences of tens of thousands of people who conducted price searches for books on
+Dealtime to estimate several discrete-choice models of demand.
+  \item Baye, Gatti, Kattuman, and Morgan (2006): an extensive data set on the Kelkoo price comparison site, finding that there is a big discontinuity in
+  clicks at the top, in line with clearinghouse models.
+  \end{itemize}
+  
+\framebreak
+  
+\item Online price dispersion
+  \begin{itemize}
+  \item Price elasticities obtained from quantity data in an online retail sector: Chevalier and Goolsbee (2003).
+  \item Internet search and price levels: Brown and Goolsbee (2002); Scott Morton, Zettelmeyer, and Silva-Risso (2001, 2003).
+  \end{itemize}
+  
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contribution}
+\begin{itemize}
+  \item Actual quantities rather than clicks
+  \item Quantity numbers rather than quantity ranks
+  \item Spawned a broader literature on obfuscation
+\end{itemize}
+\end{frame}
+
+\section{Theory of Search and Obfuscation}
+% understand
+\subsection{Incomplete Consumer Search}
+\begin{frame}
+\frametitle{Incomplete Consumer Search}
+\begin{itemize}
+  \item Stahl (1989,1996): a model with search cost - mixed strategy randomizing over prices with some interval; fully informed consumer purchase with lowest price and others stop searching before finding the lowest
+  \item Basic intuition from search models: obfuscation might lead to higher profits by making consumer learning less complete
+\end{itemize}
+\end{frame}
+
+\subsection{Add-Ons and Adverse Selection}
+\begin{frame}[allowframebreaks]
+\frametitle{Add-Ons and Adverse Selection: Setup}
+\begin{itemize}
+\item Two firm i=1,2
+\item Two versions of goods j=L,H
+\item Constant marginal costs $c_L$ and $c_H$;\\ upgrade cost $c_U=c_H-c_L$
+\item Post prices $p_{iL}$ and nonposted prices $p_{iH}$;\\ upgrade price $p_{iU}\equiv p_{iH}-p_{iL}$
+\item Time cost per website s
+\item Buy at most one unit
+
+\framebreak
+
+\item Incremental price of the "upgrade" $\varepsilon$: for $\varepsilon<s$, no consumer will switch to the other firm
+\item $x(p_{iU},p_{iL},p_{-iL})$: the fraction of consumers choosing to upgrade
+\item $p*_{iU}(p_{iL},p_{-iL})=p^m_{iU}(p_{iL},p_{-iL})\equiv Arg \max_p (p-c_U)x(p,p_{iL},p_{-iL})$
+\item $x*(p_{1L},p_{2L})$ for $x(p*_{iU}(p_{iL},p_{-iL}))$
+\item  $D_1(p_1,p_2)$: number of consumers who visit firm 1 (In any pure strategy equilibrium, all consumers who visit firm i will buy from firm i)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Add-Ons and Adverse Selection: Model}
+\begin{itemize}
+\item Firm 1's profit:
+\begin{align*}
+\pi_1(p_{1L},p*_{2L})&=(\text{unit profit from low quality}\\
+ &\quad +\text{fraction of upgrade}*\text{unit profit from upgrade})\\
+ &\quad *\text{number of consumers buying} \\
+&=[(p_{1L}-c_L)+x^*(p_{1L},p^*_{2L})*(p^m_{1U}(p_{1L},p^*_{2L})-c_U)]\\
+&\quad *D_1(p_{1L},p*_{2L}) \\
+\end{align*}
+
+\framebreak
+\item First-order condition:
+\begin{align*}
+\frac{\delta \pi_1}{\delta p_{1L}}&=\frac{\delta D_1}{\delta p_{1L}} (p_{1L}-c_L+x^*(p_{1L},p^*_{2L})(p^m_{1U}(p_{1L},p^*_{2L})-c_U))\\
+&\quad +D_1(p_{1L},p^*_{2L})[1+\frac{\delta x^*}{\delta p_{1L}}(p^*_{1U}(p_{1L},p^*_{2L})-c_U)\\
+&\quad +x^*(p_{1L},p^*_{2L})\frac{\delta p^m_{1U}}{\delta p_{1L}}] \\
+\end{align*}
+
+\framebreak
+\begin{align*}
+\intertext{Let}
+\varepsilon&=\frac{\delta D_1}{\delta P_{1L}}\frac{p^*_{1L}+x^*(p_{1L},p^*_{2L})p^m_{1U}}{D_1(p^*_{1L},p^*_{2L})} \\
+\intertext{Therefore,}
+&\quad \frac{p^*_{1L}-c_L+x^*(p^m_{1U}-c_U)}{p^*_{1L}+x^*(p_{1L},p^*_{2L})p^m_{1U}} \\
+&=-\frac{1}{\varepsilon}(1+\frac{\delta x^*}{\delta p_{1L}}(p^*_{1U}(p_{1L},p^*_{2L})-c_U)+x^*(p_{1L},p^*_{2L})\frac{\delta p^m_{1U}}{\delta p_{1L}})\\
+\end{align*}
+
+\item First-order condition:
+\begin{align*}
+\text{\tiny Firm's revenue-weighted average markup}&=\text{\tiny Inverse of a demand elasticity and a multiplier}
+\intertext{Suppose $p_{1U}$ is independent of $p_{1L}$,}
+\frac{\delta p^m_{1U}}{\delta p_{1L}}&=0 \\
+\frac{\delta x*}{\delta p_{1L}}&=0 \\
+\intertext{Therefore,}
+\frac{p^*_{1L}-c_L+x^*(p^m_{1U}-c_U)}{p^*_{1L}+x^*(p_{1L},p^*_{2L})p^m_{1U}}&=-\frac{1}{\varepsilon}\\
+\end{align*}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Add-Ons and Adverse Selection: Implication}
+\begin{itemize}
+\item Constant-upgrade-fraction assumption is not compelling(Ellison, 2005)
+  \begin{itemize}
+  \item Price cuts disproportionately attract cheap models who have a lower willingness to pay for upgrades:
+  $\frac{\delta p^m_{1U}}{\delta p_{1L}}>0$,$\frac{\delta x^*}{\delta p_{1L}}>0$
+  \end{itemize}
+\item Such demand systems has an adverse-selection problem when add-ons are sold.
+    \begin{itemize}
+    \item Sales of add-ons will raise equilibrium profit margins above the inverse-elasticity benchmark
+    \item Taking a low-cost, high-value feature out of the
+low-quality good and making it available in the high-quality good may be a profit-enhancing strategy.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{The Pricewatch Universe And Memory Modules}
+
+\section{Observations of Obfuscation}
+
+\section{Data}
+
+\begin{frame}
+\frametitle{Variables}
+\begin{itemize}
+\item LowestPrice: lowest price listed on Pricewatch
+\item Range 1-12: the difference between the twelfth lowest listed price and the lowest listed price
+\item PLow, PMid and PHi: prices for tree qualities of memory modules at the two websites
+\item QLow, QMid, and QHi: average daily quanitities of each quality of module sold by each website
+\item PLowRank: the rank of the website's first entry in Pricewatch's sorted list of prices within the category
+\end{itemize}
+\end{frame}
+
+\section{Demand Patterns}
+\subsection{Methodology for Demand Estimation}
+\begin{frame}[allowframebreaks]
+\frametitle{Methodology for Demand Estimation}
+\begin{itemize}
+\item Product category: c
+\item Quality: q
+\item Website: w
+\item Day: t
+\end{itemize}
+
+\framebreak
+
+\begin{align*}
+Q_{wcqt}&=e^{X_{wct}\beta_{cq}}u_{wcqt}
+\intertext{with}
+X_{wct}\beta_{cq}&=\beta_{cq0}+\beta_{cq1}log(PLow_{wct})+\beta_{cq2}log(PMid_{wct})\\
+&\quad+ \beta_{cq3}log(PHi_{wct})+\beta_{cq4}log(LowestPrice_{ct})\\
+&\quad+\beta_{cq5}log(1+PLowRank_{wct})+\beta_{cq6}Weekend_t\\
+&\quad+\beta_{cq7}SiteB_w + \sum_{s=1}^{12}\beta_{cq(7+s)}TimeTrend_{st}
+\end{align*}
+\end{frame}
+
+\subsection{Basic Results on Demand}
+\begin{frame}[allowframebreaks]
+\frametitle{Demand for 128MB PC100 Memory Modules(Table II)}
+\begin{itemize}
+\item Demand for low-quality modules at a website is extremely price-sensitive - the effect of Pricewatch rank on demand
+    \begin{itemize}
+    \item Coefficient on log(1+PLowRank): moving from first to seventh reduces 83\% ??
+    \item Highly significant
+    \end{itemize}
+    
+\framebreak
+ 
+\item Low-quality memory is an effective loss leader
+\begin{itemize}
+\item Coefficients on log(1+PLowRank) in the second and third columns are negative and highly significant - higher position, higher sales
+\item Effect is strong: medium - 66\%; high - 51\%  ??
+\item Pricewatch ranks change frequently, whereas medium- and high-quality prices are left unchanged for substantial periods of time, so that most of the
+variation in the attractiveness of our firm's medium- and high-quality prices will occur around the occasional price changes.
+\end{itemize}
+\item Site B dummy are negative and significant - website design is important
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Price Elasticities for Memory Modules(Table III)}
+\begin{itemize}
+\item An own-price elasticity of ?24.9 for low-quality 128MB PC100 modules.
+\item  low-quality products have highly elastic demand and that there are loss-leader benefits from selling low-quality goods at a low price are consistent across categories
+\end{itemize}
+\end{frame}
+
+\subsection{The Mechanics of Obfuscation: Incomplete Consumer Search}
+% not understand
+\begin{frame}[allowframebreaks]
+\frametitle{The Mechanics of Obfuscation: Incomplete Consumer Search}
+\begin{itemize}
+\item Motivation:
+\begin{itemize}
+\item An alternate explanation for the finding could be that PLowRank is correlated with the rank of a site's higher quality offerings
+\end{itemize}
+\item Method:
+\begin{itemize}
+\item Logit models
+\item Dependent variable: Site A
+\item Independent variable: log(1+PLowRank),log(PMid),log(PHi),time trends
+\end{itemize}
+
+\framebreak
+\item Results(Table IV):
+\begin{itemize}
+\item Consumers are influenced by the prices of the product they are buying
+\item Consumers are also more likely to purchase from the site with a lower low-quality price
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{The Mechanics of Obfuscation: Add-Ins and Adverse Selection}
+\begin{frame}
+\frametitle{The Mechanics of Obfuscation: Add-Ins and Adverse Selection}
+\begin{itemize}
+\item If the elasticity on the low-quality memory is larger (in absolute value) than that for medium- or high-quality memory, there is evidence of adverse selection (Note on constant-fraction assumption of Section 2)
+\item  Firm's quality mix using sample means: 63\% low-quality in first place; 35\% in tenth place ??
+\end{itemize}
+\end{frame}
+
+\subsection{Instrumental Variables Estimates}
+% not understand
+\begin{frame}
+\frametitle{Instrumental Variables Estimates}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+
+\section{Markups}
+\begin{frame}
+\frametitle{}
+\begin{itemize}
+\item 
+\item 
+\end{itemize}
+\end{frame}
+
+
+\end{document}
+
+ 
