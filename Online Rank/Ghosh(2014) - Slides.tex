@@ -1,0 +1,137 @@
+\documentclass{beamer}
+
+% theme
+\mode<presentation>
+{
+\usetheme{Warsaw}
+
+\setbeamercovered{transparent}
+}
+
+% packages
+% \usepackage{multicol}
+
+% setting
+\linespread{1.2}
+
+% title page
+\title{A Game-Theoretic Analysis of Rank-Order Mechanisms for User-Generated Content}
+\subtitle{Arpita Ghosh and Patrick Hummel}
+\author{Guo Zhang}
+\institute{WISE, Xiamen University}
+\date{This Version: \today}
+\subject{}
+
+% body
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\begin{frame}[plain]
+\frametitle{Contents}
+% \begin{multicols}{2}
+\tableofcontents[hideallsubsections]
+% \end{multicols}
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Background}
+\begin{itemize}
+\item User contributed contents are not with same quality
+\item Rank mechanism may affect the incentives to produce high quality content
+\item Diverging attention regime ??
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview}
+\begin{itemize}
+	\item Question: 
+	\item Two mechanisms
+	\begin{itemize}
+		\item rank-order: popular
+		\item proportional: fair
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contributions}
+\begin{itemize}
+	\item Participation is endogenously determined
+	\item An agent's payoff depends on his choice and quality and other agents' choices of quality; votes is a random variable of quality; rank are decided by votes
+	\item Symmetric mixed strategy equilibria always exist
+	\item Compare two machanisms
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Related Work}
+\begin{itemize}
+	\item Little game-theoretic perspective of human computing systems
+	\item Large literature in economics on using rank-order tournaments as incentive schemes(e.g. employee ranking); no work on the framework of votes and quality(non-deterministic) - mixed strategy equilibria
+	\item Little comparation between two mechanisms
+	\item Allocating political power in proportion to the number of votes; no foucs on the differences to produce high quality actions 
+\end{itemize}
+\end{frame}
+
+\section{Model}
+\begin{frame}
+\frametitle{Content}
+\begin{itemize}
+\item Quality $q$
+\item $T$ viewers: chosen by the mechanism; not strategic \\
+(Are there any situations that viewers appear strategic?)
+\item Contribution $i$, quality $q_i$, votes $m_i$, votes of others $m_{-i}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contributors}
+\begin{itemize}
+	\item Contributors size $K$, number of actual contributor $k$
+	\item Strategic contributors choose the probability $\beta_i$ of contribute and quality of contribution $q_i$ to maximize their expected payoffs
+	\item Cost $c(q)$, $c'(q)>0$
+	\begin{itemize}
+		\item $c$ is continuously differentiable in $q$ for all $q<1$
+		\item $c(0)>0$ and $lim_{q\to 1}c(q)=\infty$
+		\item convex and $c'(0)=0$
+	\end{itemize}
+	\item Benefit $V(m_i,m_{-i})=\alpha_i(m_i,m_{-i})A$: rating of her and others' contribution 
+	\item Payoff $\pi(q_i,q_{-i},\beta_{-i})=E[V(m_i,m_{-i})|(q_i,q_{-i},\beta_{-i})]-c(q_i)$
+	\item Assumption: $K\leq A$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution Concept}
+\begin{itemize}
+	\item Symmetric mixed strategy equilibrium with probability $\beta$, distribution $F(q)$: no agent can increase her expected payoff by deviating from this strategy
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Asympototics}
+\begin{itemize}
+	\item $A\to \infty$: $K(A)$ and $T(A)$ increases
+	\item Mechanism chooses $T=T(A)$ ??
+\end{itemize}
+\end{frame}
+
+\section{Preliminaries}
+\begin{frame}
+\frametitle{}
+\end{frame}
+
+
+\begin{frame}[plain]
+\frametitle{Contents}
+% \begin{multicols}{2}
+\tableofcontents[hideallsubsections]
+% \end{multicols}
+\end{frame}
+
+\end{document}

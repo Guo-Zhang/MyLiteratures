@@ -1,0 +1,235 @@
+\documentclass{beamer}
+
+% packages
+\usepackage{hyperref}
+\usepackage{lmodern} % http://ctan.org/pkg/lm 
+
+\begin{document}
+
+\section{Introduction}
+\begin{frame}
+
+\end{frame}
+
+
+\section{Optimal Consumer Search}
+
+\begin{frame}
+\frametitle{Assumptions}
+\begin{itemize}
+	\item \textbf{Store price $z$ as given}
+	\item Determine price distribution $F(p;z)$ of NE in consumer search conditional on z
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+$$
+CS(p;z)\equiv \int_p^z D(x)dx
+$$
+\begin{itemize}
+	\item $z\geq0$: observed price
+	\item $CS(0;z)<\infty$
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{}
+$$
+ECS(z)\equiv \int_{b}^{z}CS(p;z)dF(p)
+$$
+\begin{itemize}
+	\item F(p): price distribution
+	\item b: lower bound of F(p) 
+	\item P: upper bound of F(p) 
+\end{itemize}
+\framebreak
+$$
+ECS(z)\equiv \int_{b}^{z}D(p)F(p)dp
+$$
+\begin{itemize}
+	\item Strictly increasing for all $z\in [b,P)$ as long as $D(z)>0$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Symmetric NE Condition}
+\begin{itemize}
+	\item Sysmetric search cost $c$
+	\item Symmetric NE condition: $ECS(z)=c$
+	\item Solution: $z=r_F$
+	\begin{itemize}
+		\item $r_F$ exist
+		\item $r_F=\infty$ otherwise
+	\end{itemize}
+	\item Implication: when $p<r_F$, Consumers stop searching
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{itemize}
+	\item $c>0$
+	\item $c=0$(shoppers): all consumers will visit the store with the lowerest price only
+\end{itemize}
+\end{frame}
+
+
+\section{Store Price-Setting}
+\begin{frame}
+\frametitle{Assumptions}
+\begin{itemize}
+	\item \textbf{Consumer reservation price $r$ as given}
+	\item Determine F(p;r) of NE in price-setting conditional on r
+	\item Number of stores, $N$, as exogenously fixed
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lamma 1}
+\begin{itemize}
+	\item Given $\mu \in (0,1)$, if $F(p;r)$ is an NE-distribution conditional on reservation price $r$, then it is atomless\footnotemark
+	\item Intitution: profits could be discretely increased by undercutting atoms $\to$ price distributions with atoms cannot be optimal ???
+\end{itemize}
+\footnotetext{\href{https://en.wikipedia.org/wiki/Atom_(measure_theory)}{Atomless?}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lamma 2}
+\begin{itemize}
+	\item If $F(p;r)$ is an NE-distribution conditional on reservation price $r$, then $P_r = min\{r,\hat{p}\}$ ??
+	\begin{itemize}
+		\item $P_r$: maximal element of the support of $F(p;r)$ ??
+		\item $b(r)$: minimal element of the support ??
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+$$
+E\pi_j(p_j,F)\equiv\{\mu[1-F(p_j;r)]^{N-1}+(1-\mu)/N\}\cdot R(p_j)
+$$
+\begin{itemize}
+	\item $E\pi_j$: profit that store j can expect when it sets price $p_j<\hat{p}$ while all other stores play $F(p;r)$
+	\item First component: shoppers; probability that $p_j$ is lower than the other N-1 prices
+	\item Second component: captured consumers with positive search costs
+	\item $R(p_j)$: ??
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Definition}
+\begin{itemize}
+	\item A distributuon $F(p;r)$ is a conditional NE if $E\pi(p,F)$ is equal to a constant($\pi$) for all $p$ in the support of $F$ and not greater than $\pi$ for any $p$. $F(p;r)$ is a consistent NE if F is a conditional NE and $r$ is a consistent reservation price. ??
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{itemize}
+	\item Conditional NE-expected profit
+	$$
+	\pi = E\pi(P_r,F)=R(P_r)\cdot(1-\mu)/N
+	$$
+	\item Solving $E\pi[p,F(p;r)]=\pi$ for $F(p;r)$
+	$$
+	F(p;r)=1-[(\frac{1-\mu}{N\mu})(\frac{R(P_r)}{R(p)}-1)]^{\frac{1}{N-1}}
+	$$
+	\item Density function:
+	$$
+	f(p;r) = \frac{}{} \times [(\frac{1-\mu}{N\mu})(\frac{R(P_r)}{R(p)}-1)]^{-\frac{N-2}{N-1}} \times \frac{R(P_r)}{R(p)} \frac{R'(p)}{R(p)}
+	$$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
+
+\section{Asymptotic Results}
+\begin{frame}
+\begin{itemize}
+	\item How the parameter $(\mu, N, c)$ affect
+	\begin{itemize} 
+	\item Consistent reservation price: $\rho(\mu,N,c)$
+	\item Resulting NE distribution of prices: $\Phi(p;\mu,N,c)\equiv F[p;\rho(\mu,N,c),\mu,N]$
+	\item Lower bound of the support of this distribution: $\beta(\mu,N,c)\equiv b[\rho(\mu,N,c),\mu,N]$
+	\item Upper bound of the support of this distribution: $P_r(\mu,N,c)\equiv min\{\rho(\mu,N,c),\hat{p}\}$
+	\item NE-expected profits: $\pi(\mu,N,c)\equiv[P_r(\mu,N,c)]\cdot(1-\mu)/N$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item $\mu$ approaches 0 or 1
+	\item $c$ approaches 0 or increases without bound
+	\item $N$ increases without bound
+\end{frame}
+
+\section{Local Comparative Statics}
+
+\section{Welfare Analysis}
+
+\section{Discussion}
+\begin{frame}
+\begin{itemize}
+	\item Bridge between Bertrand and Diamond results
+	\begin{itemize}
+		\item As the proportion of shoppers goes from 1 to 0, the NE changes continuously from the Bertrand NE to the Diamond NE.
+		\item As the cost of search goes to zero, the NE converges to the Bertrand NE.
+		\item As the number of stores increase, the NE moves toward the Diamond NE.
+		\begin{itemize}
+			\item With more stores, the probability of being the lowest-priced store descreases exponentially.
+			\item $\to$ Enter discourages more competitive pricing.
+		\end{itemize}
+		\item Welfare effects
+		\begin{itemize}
+		     \item Shoppers benefit from having more stores.
+		     \item Effects on total social welfare depend on demand specifications.
+		     \item Total Surplus declines monotonically with entry.
+	    \end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item Permit more general distributions of search costs
+	\item Permit a postitive cost to second visits
+	\begin{itemize}
+		\item Perfect recall but return costly
+		\item $\to$Alter the reservation prices of cousumers
+	\end{itemize}
+	\item Asymmetric NE
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item Increase marginal costs
+	\item Fixed costs
+	\item Capacity constraints
+	\item Heterogeneous marginal costs
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{itemize}
+	\item Consumers act over time
+	\item Stores adopt static strategies
+	\end{itemize}
+\end{frame}
+
+\end{document}

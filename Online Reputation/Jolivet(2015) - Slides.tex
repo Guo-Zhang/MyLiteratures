@@ -1,0 +1,98 @@
+\documentclass{beamer}
+
+\begin{document}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Background}
+\begin{itemize}
+\item Challenge: design mechanism that address fraud and seller misbehavior
+\item Response: online feedback
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Objective}
+\begin{itemize}
+\item The effect of seller reputation on transaction prices
+\begin{itemize}
+  \item The effect of reputation for a wide range of product categories is larger than literatures
+  \item Methodologically, unobserved heterogeneity related to dynamics from the feedback mechanism
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methods}
+\begin{itemize}
+\item Data: one of France’s largest e-commerce plat- forms, PriceMinister
+\item Goal: the relation between a seller’s average feedback score and its prices for different categories of products, product conditions and types of sellers
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Finding}
+\begin{itemize}
+\item We estimate a statistically significant, positive and large causal effect of average rating on transaction prices.
+\item The effect differs across products and seller categories (professional sellers or private individuals).\item The effect of average rating increases with the size and decreases with the advertised condition of the good.\item We also find a positive effect of recent feedback scores on prices, but of a small magnitude.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\end{frame}
+
+\section{}
+
+\section{Empirical Framework}
+\subsection{The Econometric Model}
+\begin{frame}
+\frametitle{}
+$$
+p_{ijd}=g(r_{id},s_{id})+\beta x_{ijd}+\alpha_i+\mu_j+\varepsilon_{ijd}
+$$
+\begin{itemize}
+\item Logarithm of the price $p_{ijd}$
+\item Seller i, product j, discrete time d
+\item Seller's rating $r_{id}$
+\item Seller's size $s_{id}$
+\item The effect of rating and size $g()$
+\item Seller/Product characteristics $x_{ijd}$
+\item Seller and product unobserved fixed characteristics $\alpha_i$ and $\mu_j$
+\item Unobserved seller/product-specific shcok $\varepsilon_{ijd}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\subsection{Identification}
+\subsubsection{First Transactions}
+\begin{frame}
+\frametitle{First Transactions}
+\begin{itemize}
+\item Product's characteristics have no direct effects on seller's reputation for the first transactions $\to$ $\alpha_i$ eliminated
+\begin{itemize}
+\item 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Product Heterogeneity}
+\begin{frame}
+\frametitle{}
+$$
+E[(\mu_{j(i,t+k)}-\mu_{j(i,t)})|r_{it-l}] = E[(\mu_{j(i,t+k)}-\mu_{j(i,t)})|s_{it-l}] = 0
+$$
+\end{frame}
+
+\subsubsection{The Dynamics of Reputation}
+\begin{frame}
+\frametitle{}
+$$
+E[(\varepsilon_{j(i,t+k)}-\varepsilon_{j(i,t)})|r_{it-l}] = E[(\varepsilon_{j(i,t+k)}-\varepsilon_{j(i,t)})|s_{it-l}] = 0
+$$
+\end{frame}
+
+
+\end{document}
