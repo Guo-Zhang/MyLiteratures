@@ -3,3 +3,7 @@
 *.gz
 *.zip
 *.rar
+*.snm
+*.nav
+*.out
+*.toc
